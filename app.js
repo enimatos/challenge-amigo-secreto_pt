@@ -17,7 +17,7 @@ function atualizarLista(){
 
 function adicionarAmigo(){
     //if (document.getElementById('amigo').value == ""){
-    if (inputAmigo.value === ""){
+    if (inputAmigo.value.trim() === ""){
         alert("Digite o nome de uma amigo antes de tentar adicionar.")
     }else{
         amigos.push(inputAmigo.value)
@@ -34,7 +34,7 @@ function sortearAmigo(){
         let numero = Math.floor(Math.random() * amigos.length);
         // Esconde a lista após o sorteio
         listaAmigos.style.display = 'none';
-        resultado.innerHTML = `O amigo secreto sorteado é ${amigos[numero]}` 
+        resultado.innerHTML = `O nome sorteado foi ${amigos[numero]}` 
     }
     
 
